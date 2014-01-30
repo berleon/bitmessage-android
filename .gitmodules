@@ -1,0 +1,4 @@
+[submodule "extern/notbit"]
+	path = extern/notbit
+	url = https://github.com/berleon/notbit.git
+	branch = api
