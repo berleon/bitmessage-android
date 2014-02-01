@@ -31,7 +31,7 @@ OPENSSL_EXCLUSION_LIST="no-krb5 no-gost no-idea no-camellia \
         no-mdc2 no-engine no-tls2 no-srtp"
 
 (cd $OPENSSL_SOURCES;
-    ./Configure android
+    ./Configure android  # ${OPENSSL_EXCLUSION_LIST}
 
     make build_crypto
 
