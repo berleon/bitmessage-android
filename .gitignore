@@ -26,4 +26,13 @@ proguard/
 extern/openssl-*
 
 # compiled libraries
-/lib
+/libs
+/obj
+# ant build script
+/build.xml
+
+# eclipse
+/.project
+/.cproject
+/.classpath
+/.settings
