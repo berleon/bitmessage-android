@@ -28,6 +28,7 @@ extern/openssl-*
 # compiled libraries
 /libs
 /obj
+/jni/prebuild
 # ant build script
 /build.xml
 

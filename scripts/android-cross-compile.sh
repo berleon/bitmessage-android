@@ -70,7 +70,7 @@ export SYSROOT="$ANDROID_TOOLCHAIN_DIR/sysroot"
 export TARGET="arm-linux-androideabi"
 export HOST="arm-linux-androideabi"
 
-export LIBRARY_PATH="$PROJECT_ROOT/libs/armeabi/"
+export LIBRARY_PATH="$PROJECT_ROOT/jni/prebuild/armeabi/"
 mkdir -pv $LIBRARY_PATH
 
 $COMPILE_SCRIPT
@@ -97,7 +97,7 @@ export TARGET="i686-linux-androideabi"
 export HOST="i686-linux-androideabi"
 
 
-export LIBRARY_PATH="$PROJECT_ROOT/libs/x86/"
+export LIBRARY_PATH="$PROJECT_ROOT/jini/prebuild/x86/"
 mkdir -pv $LIBRARY_PATH
 
 $COMPILE_SCRIPT
