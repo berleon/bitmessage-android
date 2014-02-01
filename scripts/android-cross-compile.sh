@@ -11,11 +11,17 @@ fi
 
 if [ "$1" == "--help" ]; then
     echo "the '$0' script helps to cross compile libraries for android"
+    echo "make sure \$ANDROID_NDK points to your local Android NDK"
     exit 0
 fi
 
 COMPILE_SCRIPT="$1"
 
+if [ ! ${ANDROID_NDK} ]; then
+    echo "export \`ANDROID_NDK\' to the directory of your local ndk"
+    echo "Try '$0 --help' for more information"
+    exit 1
+fi
 
 if [ ! ${ANDROID_PLATFORM_VERSION} ]; then
     ANDROID_PLATFORM_VERSION=$(./scripts/project-target.sh)
@@ -97,7 +103,7 @@ export TARGET="i686-linux-androideabi"
 export HOST="i686-linux-androideabi"
 
 
-export LIBRARY_PATH="$PROJECT_ROOT/jini/prebuild/x86/"
+export LIBRARY_PATH="$PROJECT_ROOT/jni/prebuild/x86/"
 mkdir -pv $LIBRARY_PATH
 
 $COMPILE_SCRIPT
